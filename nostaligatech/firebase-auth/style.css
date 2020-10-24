@@ -29,6 +29,10 @@ html {
   width: device-width;
 }
 
+img {
+    border-radius: 50%;
+}
+
 article,
 aside,
 figcaption,
