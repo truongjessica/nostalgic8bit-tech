@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Compiled and minified CSS -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <title>GameGuidez</title>
 </head>
 
-<body class="grey lighten-3"">
+<body class="">
 
   <!-- NAVBAR -->
-  <nav class=" z-depth-0 grey lighten-4">
+</label>
+  <nav class="z-depth-0 grey lighten-4">
   <div class="nav-wrapper container">
-    <a href="#" class="brand-logo">
-      <img src="img/logo.svg" style="width: 180px; margin-top: 10px;">
-    </a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li class="logged-in" style="display: none;">
         <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
@@ -28,10 +28,10 @@
         <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a>
       </li>
       <li class="logged-out" style="display: none;">
-        <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+        <a class="nes-btn modal-trigger" data-target="modal-login" href="#">Login</a>
       </li>
       <li class="logged-out" style="display: none;">
-        <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+        <a class="nes-btn modal-trigger" data-target="modal-signup" href="#">Sign Up</a>
       </li>
       </span>
     </ul>
@@ -45,17 +45,17 @@
       <form id="signup-form">
         <div class="input-field">
           <input type="email" id="signup-email" required />
-          <label for="signup-email">Email address</label>
+          <label for="signup-email">Email Address</label>
         </div>
         <div class="input-field">
           <input type="password" id="signup-password" required />
-          <label for="signup-password">Choose password</label>
+          <label for="signup-password">Create A Password</label>
         </div>
         <div class="input-field">
           <input type="text" id="signup-bio" required />
-          <label for="signup-bio">One Line Bio</label>
+          <label for="signup-bio">What's a funfact about you?</label>
         </div>
-        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+        <a class="nes-btn" href="#">Sign Up</a>
         <p class="error pink-text center-align"></p>
       </form>
     </div>
@@ -68,13 +68,13 @@
       <form id="login-form">
         <div class="input-field">
           <input type="email" id="login-email" required />
-          <label for="login-email">Email address</label>
+          <label for="login-email">Email Address</label>
         </div>
         <div class="input-field">
           <input type="password" id="login-password" required />
-          <label for="login-password">Your password</label>
+          <label for="login-password">Password</label>
         </div>
-        <button class="btn yellow darken-2 z-depth-0">Login</button>
+        <a class="nes-btn" href="#">Login</a>
         <p class="error pink-text center-align"></p>
       </form>
     </div>
