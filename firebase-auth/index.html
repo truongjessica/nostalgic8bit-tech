@@ -1,0 +1,132 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>NOSTALGIA</title>
+  <link rel="icon" href="img/heart.jpg" type="image/png">
+</head>
+
+<body class="">
+
+  <!-- NAVBAR -->
+  <div class="nav-wrapper container">
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li class="logged-in" style="display: none;">
+        <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+      </li>
+      <li class="logged-in" style="display: none;">
+        <a href="#" class="grey-text" id="logout">Logout</a>
+      </li>
+      <li class="admin" style="display: none;">
+        <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a>
+      </li>
+      <li class="logged-out" style="display: none;">
+        <a class="nes-btn modal-trigger" data-target="modal-login" href="#">Login</a>
+        <a class="nes-btn modal-trigger" data-target="modal-signup" href="#">Sign Up</a>
+      </li>
+      </span>
+    </ul>
+  </div>
+
+  <!-- SIGN UP MODAL -->
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4>Sign up</h4><br />
+      <form id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email Address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Create A Password</label>
+        </div>
+        <div class="input-field">
+          <input type="text" id="signup-bio" required />
+          <label for="signup-bio">Share a fun fact about yourself!</label>
+        </div>
+        <a class="nes-btn" href="#">Sign Up</a>
+        <p class="error pink-text center-align"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4><br />
+      <form id="login-form">
+        <div class="input-field">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email Address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Password</label>
+        </div>
+        <a class="nes-btn" href="feed.html">Login</a>
+        <p class="error pink-text center-align"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ACCOUNT MODAL -->
+  <div id="modal-account" class="modal">
+    <div class="modal-content center-align">
+      <h4>Account details</h4><br />
+      <div class="account-details"></div>
+    </div>
+  </div>
+  </ul>
+  </div>
+
+  <br>
+  
+  <div style="margin-top: 80px; margin-left: 15%; width: 70%;" class="nes-container with-title is-centered">
+    <p class="title" style="font-size: larger;">WELCOME</p>
+    <p>Feeling nostalgic?<br><br><br><br>
+      This is where the past and present meet.<br><br><br><br>
+      Isn't it awesome?<br><br><br><br>
+      Go on, login or signup in the top right!<br><br>
+      <section class="icon-list">
+        <!-- Copyright Nintendo -->
+        <i class="nes-kirby"></i>
+      </section>
+    </p>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBEH1VlwrYOGdmYy74xsFeHVLjDVOTYmcs",
+      authDomain: "kenthack-nostaligatech.firebaseapp.com",
+      databaseURL: "https://kenthack-nostaligatech.firebaseio.com",
+      projectId: "kenthack-nostaligatech",
+      appId: "1:64661595123:web:5aa4b16cb693221a772886"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Make Auth/Firebase References
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+  </script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+
+</html>
